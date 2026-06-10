@@ -3,7 +3,7 @@
 import streamlit as st
 from openpyxl import *
 
-Mem_info = load_workbook('C:/Users/user/Desktop/강예진/1. 데이터분석/파이썬기초/회원정보.xlsx')
+Mem_info = load_workbook('회원정보.xlsx')
 info_sheet = Mem_info.active
 
 # 전역변수(streamlit)
@@ -57,7 +57,7 @@ with tab2:
 
         if st.form_submit_button('저장'): #클릭시
             info_sheet.append(회원정보) #엑셀에 담기
-            Mem_info.save('C:/Users/user/Desktop/강예진/1. 데이터분석/파이썬기초/회원정보.xlsx')
+            Mem_info.save('회원정보.xlsx')
             st.success('저장 완료!')
 
 if st.button('새로고침'):
